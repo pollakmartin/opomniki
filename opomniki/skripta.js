@@ -15,6 +15,15 @@ window.addEventListener('load', function() {
 			// - sicer zmanjšaj čas za 1 in nastavi novo vrednost v časovniku
 		}
 	}
-	setInterval(posodobiOpomnike, 1000);
 	
+	var potrdiKlik = function(){
+		var uporabnik = document.getElementById("uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML = uporabnik;
+		document.querySelector(".pokrivalo").style.visibility = "hidden";
+	}
+	
+	document.querySelector("#prijavniGumb").addEventListener("click", potrdiKlik);
+	//document.getElementById(prijavniGumb)
+	
+	setInterval(posodobiOpomnike, 1000);
 });
